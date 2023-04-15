@@ -13,3 +13,11 @@
 #intro h2{
     font-size: 1.5rem;
 }
+h4 i{
+    letter-spacing: 2px;
+    line-height: 40px;
+    padding-left: 50px;
+}
+.box{
+    padding: 0px;
+}
