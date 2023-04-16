@@ -9,6 +9,25 @@
     <link rel="stylesheet" media="screen and (max-width:800px)" href="tablet.css">
     <link rel="stylesheet" media="screen and (max-width:530px)" href="phone.css">
     <link rel="icon" href="akhila.jpg" type="image/x-icon">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      
+
+     <style>
+      icons{
+      
+      
+        font-size: 3rem;
+        color:rgb(224, 51, 146) ;
+        
+      }
+      h1:hover{
+        text-shadow: blue -3px 0,pink 3px 0;
+      }
+      h2:hover {
+        text-shadow: red -3px 0, cyan 3px 0;
+
+      }
+     </style>
 </head>
 <body>
       <nav class="navbar">
@@ -96,8 +115,51 @@
         <button class="btn">
           HIRE ME
       </button>
+            <icons>
+
+      <a href="https://www.instagram.com/akhila_reddy006">
+      <p><i class="fa-brands fa-instagram"></i></p></a>
+      <a href="https://www.linkedin.com/in/akhila-reddy-52b7a4270/">
+      <i class="fa-brands fa-linkedin"></i>
+      </a>
+      </icons>
+      <contact>
+        <div class="container">
+          <form onsubmit="sendEmail(); reset(); return false; ">
+            <h4>
+              Get in touch
+            </h4>
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="email" id="email" placeholder="Email id" required>
+            <input type="text" id="phone" placeholder="Phone no." required>
+            <button type="submit" > Send</button>
+          </form>
+        </div>
+      </contact>
       </div>
       </section>
+    <script src="https://smtpjs.com/v3/smtp.js"></script> 
+    <script>
+      function sendEmail(){
+        Email.send({
+            Host : "smtp.gmail.com",
+            Username : "akhilareddy.av@gmail.com",
+            Password : "mypetnameisjack",
+            To : 'avreddy0629@gmail.com',
+            From : document.getElementById("email").value,
+            Subject : "This is the subject",
+            Body : "Name: " + document.getElementById("name").value
+            + "<br> Email: " + document.getElementById("email").value
+            + "<br>  Phone no: " + document.getElementById("phone no.").value
+            
+        }).then(
+          message => alert(Message sent succesfully)
+        );
+      }
+    </script>
+      
+
+      
       
   
       
